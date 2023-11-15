@@ -10,7 +10,7 @@ function App() {
   return (
     <div className="max-h-screen flex">
       <ChatLog chatList={chatList} />
-      <div className="w-full h-full flex flex-col relative bg-yellow-100">
+      <div className="w-full min-h-screen flex flex-col relative">
         <ChatView chatList={chatList} />
         <ChatSubmit
           content={content}

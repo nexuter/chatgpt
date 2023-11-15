@@ -5,12 +5,11 @@ function ChatLogCard({ question, answer }) {
 
   function onClickOpenToggle() {
     setIsOpen(!isOpen);
-    console.log(isOpen);
   }
 
   return (
     <>
-      <li className="mb-2" onClick={onClickOpenToggle}>
+      <li className="mb-2 hover:font-bold" onClick={onClickOpenToggle}>
         {question}
       </li>
       {isOpen && (
@@ -19,8 +18,8 @@ function ChatLogCard({ question, answer }) {
             <div className="w-full text-right pb-10 text-2xl">
               <button onClick={onClickOpenToggle}>x</button>
             </div>
-            <div className="pb-8">Q. {question}</div>
-            <div>A. {answer}</div>
+            <div className="text-md">Q. {question}</div>
+            <div className="font-normal text-md">A. {answer}</div>
           </div>
         </div>
       )}
